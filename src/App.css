@@ -1,146 +1,323 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ---------------- RESET ---------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
 
 body {
-    font-family: "Roboto", sans-serif ;
-    overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(0, 0%, 100%);
+  line-height: 1.5;
 }
+
+/* ---------------- MAIN CONTAINER ---------------- */
 
 .container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  max-width: 375px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+/* ---------------- IMAGE ---------------- */
+
+.image-wrapper .mobile-illustration {
+  width: 100%;
+  display: block;
 }
 
-
-.image-wrapper {
-    width: 100%;
-    height: auto;
+.image-wrapper .desktop-illustration {
+    display: none;
 }
 
-.image-wrapper > img {
-    max-width: 100%;
-}
-
-.attribution { 
-    font-size: 14px;
-    text-align: center;
- }
-
-
-.attribution a {
-     color: hsl(320, 90%, 45%);
-     }
-  
-
-.newsletter-info > h1 {
-    padding-top: 1rem;
-    padding-bottom: 0.9rem;
-    font-size: 2.5rem;
-    color: hsl(234, 29%, 20%);
-}
+/* ---------------- CONTENT ---------------- */
 
 .newsletter-info {
-    color: hsl(235, 18%, 26%);
-    padding: 0 1rem 0 ;
+  padding: 2rem 1.5rem 1rem;
+  color: hsl(235, 18%, 26%);
 }
 
-.newsletter-info > p,
-.newsletter-info > ul li {
-    line-height: 1.2rem;
-    font-size: 16px;
-    padding: 0.5rem;
-    
-    
+.newsletter-info h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: hsl(234, 29%, 20%);
 }
 
-.newsletter-info > ul > li {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.newsletter-info p {
+  margin-bottom: 1rem;
 }
 
-li {
+.newsletter-info ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.newsletter-info li {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
-.email
- {
-    display: block;
-    padding: 0 2.5rem 0.5rem;
-    font-weight: 800;
-}
+/* ---------------- FORM ---------------- */
 
-.input {
-    display: block;
-    margin: 0 2.5rem 1rem;
-    border-radius: 5px;
-    border: 1px solid hsl(0, 0%,58%);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+form {
+  padding: 0 1.5rem 2rem;
+  position: relative;
 }
 
 label {
-    margin-top: 1rem;
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: hsl(234, 29%, 20%);
 }
 
 input[type="email"] {
-  padding: 20px 120px 20px 15px;
-  cursor: pointer;
-}
-
-
-
-
-
-   input[type="submit"] {
-  color: hsl(0, 0%, 100%);
-  display: flex;
-  width: 82%;
-  background-color: hsl(234, 29%, 20%);
-  padding: 1.2rem 1rem;
-  margin: 0 2.5rem 1rem;
-  text-align: center;
-  border: none;
+  width: 100%;
+  padding: 0.9rem 1rem;
   border-radius: 6px;
-  cursor: pointer;
+  border: 1px solid hsl(231, 7%, 60%);
   font-size: 1rem;
+  margin-bottom: 1rem;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
 }
 
-input[type="submit"]:hover {
-    background-color: hsl(4, 100%, 67%);
+input[type="email"]:focus {
+  outline: none;
+  border-color: hsl(234, 29%, 20%);
+}
+
+/* Error */
+
+.input-error {
+  border: 2px solid hsl(4, 100%, 67%);
+  background-color: hsl(4, 100%, 95%);
+  color: hsl(4, 100%, 67%);
+}
+
+.error-message {
+  color: hsl(4, 100%, 67%);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .error {
-  color: hsl(4, 100%, 67%);
+    color: hsl(4, 100%, 67%);
+     font-size: 0.8rem;
+     display: flex;
+     justify-content: flex-end;
+
+}
+
+.error-display {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ---------------- BUTTON ---------------- */
+
+button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: hsl(234, 29%, 20%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(
+    90deg,
+    hsl(4, 100%, 67%),
+    hsl(340, 100%, 65%)
+  );
+}
+
+/* ---------------- SUCCESS PAGE ---------------- */
+
+.success-page {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  max-width: 375px;
+  margin: 2rem auto;
+  padding: 7rem 2rem 2rem;
+  border-radius: 12px;
+}
+
+.success-page h1 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: hsl(234, 29%, 20%);
+}
+
+.success-page p {
+  margin-bottom: 9rem;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+.attribution {
+  text-align: center;
   font-size: 14px;
-  margin-top: 5px;
+  margin-top: 1rem;
+  color: hsla(0, 100%, 50%, 0.61);
 }
 
-.success {
-  color: green;
-  margin-top: 10px;
+.attribution a {
+  color: hsla(0, 100%, 50%, 0.61);
+  text-decoration: none;
 }
 
-input:invalid {
-  border: 1px solid hsl(4, 100%, 67%);
+/* ---------------- DESKTOP ---------------- */
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+    height: auto;
+    margin: 5rem auto;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    justify-content: space-between;
+    
+}
+
+body {
+    background-color: hsl(235, 18%, 26%);
+     overflow: hidden;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.page {
+    max-width: 100%;
+    padding: 0;
+   
+}
+
+main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 2.2rem;
+    gap: 2.5rem;
+
+}
+  .newsletter-info,
+  form {
+    padding: 0.1em;
+    line-height: 1rem;
+    font-size: 10px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+
+  .image-wrapper  .mobile-illustration {
+  display: none;
+}
+ 
+
+.image-wrapper .desktop-illustration {
+  width: 100%;
+  display: block;
+}
+
+.newsletter-info ul {
+    margin-bottom: 0.1rem;
+}
+
+.newsletter-info  li {
+   margin-bottom: 0.3rem;
+}
+
+input[type="email"] {
+    font-size: 10px;
+}
+
+
+button {
+    font-size: 12px;
+} 
+
+
+
+  .success-page {
+    max-width: 450px;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    
+}
+
+     .success-page  p {
+        margin: 0;
+        padding: 1rem 1.5rem;
+     }
+
+.success-page > h1  {
+    font-size: 3.2rem;
+    line-height: 3.5rem;
+}
+
+.success-page button {
+    width: 350px;
+}
+/*.success-page {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  max-width: 375px;
+  margin: 2rem auto;
+  padding: 7rem 2rem 2rem;
+  border-radius: 12px;
+}
+
+.success-page h1 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: hsl(234, 29%, 20%);
+}
+
+.success-page p {
+  margin-bottom: 9rem;
+}
+*/
+ 
 }

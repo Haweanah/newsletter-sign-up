@@ -1,24 +1,49 @@
-export default function Form (props) {
-    return (
-        
-  <form onSubmit={props.handleSubmit} noValidate>
-    <label className="email"
-    htmlFor="email">Email address</label>
-   
-   
-    <input
-    className="input"
-    placeholder='email@company.com'
-    type="email" name="email" id="email"
-    value={props.email}
-    onChange={(e) => props.setEmail(e.target.value)
+import { useState } from "react";
+
+export default function Form({ setSuccess, setEmail }) {
+  const [emailInput, setEmailInput] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(emailInput)) {
+      setError("Valid email required");
+    } else {
+      setError("");
+      setEmail(emailInput);
+      setSuccess(true);
     }
-    />
+    console.log(error);
+  };
 
-    {props.error && <p className="error">{props.error}</p>}
+  return (
+    <form onSubmit={handleSubmit} noValidate>
 
-    <input type="submit" value="Subscribe to monthly newsletter" />
-    {props.success && <p className="success">Subscription successful</p>}
-  </form>
-    )
+      <p className="error-display">
+        <label>Email address</label>
+
+        {error && <span className="error">{error}</span>}
+      </p>
+     
+      <input
+        type="email"
+        value={emailInput}
+        onChange={(e) => {setEmailInput(e.target.value);
+        setError("")}
+        }
+        placeholder="email@company.com"
+        className={error ? "input-error" : ""}
+      />
+
+     
+      <button type="submit">
+        Subscribe to monthly newsletter
+      </button>
+    </form>
+  );
 }
