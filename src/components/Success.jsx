@@ -17,8 +17,7 @@ export default function Success({ email, setSuccess }) {
       </p>
 
       <button onClick={() => setSuccess(false)}
-        className={Success ? "success-button" : ""}
-        >
+      className="success-button" >
         Dismiss message
       </button>
     </div>

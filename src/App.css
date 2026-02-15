@@ -42,6 +42,7 @@ body {
 
 .image-wrapper .mobile-illustration {
   width: 100%;
+  max-width: 100%;
   display: block;
 }
 
@@ -189,7 +190,8 @@ button:hover {
   text-align: center;
   font-size: 14px;
   margin-top: 1rem;
-  color: hsla(0, 100%, 50%, 0.61);
+  color:hsl(228, 45%, 44%); 
+  
 }
 
 .attribution a {
@@ -299,25 +301,9 @@ button {
 .success-page button {
     width: 350px;
 }
-/*.success-page {
-  background-color: hsl(0, 0%, 100%);
-  width: 100%;
-  max-width: 375px;
-  margin: 2rem auto;
-  padding: 7rem 2rem 2rem;
-  border-radius: 12px;
-}
 
-.success-page h1 {
-  font-size: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  color: hsl(234, 29%, 20%);
+.success-button:hover {
+    background-color: hsl(4, 100%, 67%);
 }
-
-.success-page p {
-  margin-bottom: 9rem;
-}
-*/
  
 }
