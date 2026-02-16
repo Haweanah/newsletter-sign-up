@@ -38,15 +38,16 @@ Users should be able to:
 
 ### 📸 Screenshot
 
-(Add your screenshot here)
+![Newsletter Mobile Design Screenshot](./src/images/mobiledesign.png)
 
+![Newsletter Desktop Design Screenshot](./src/images/desktopdesign.png)
 
 ---
 
 ### 🔗 Links
 
 - Solution URL: [Frontend Mentor Solution Link]
-- Live Site URL: [Your Render Deployment Link]
+- Live Site URL: [https://haweanahnewslettersignup.onrender.com/]
 
 ---
 
@@ -74,13 +75,6 @@ While building this project, I improved my understanding of:
 - Structuring reusable React components
 - Managing UI state transitions (form → success screen)
 
-Example of conditional rendering used in this project:
-
-```js
-{success ? <Success /> : <MainLayout />}
-
-
-
 ---
 
 # 🚀 Render Deployment Settings (For Your React + Vite Project)
@@ -89,3 +83,7 @@ When deploying on Render as a **Static Site**:
 
 ### Build Command:
 npm install && npm run build
+
+
+Author: Hauwa Abdulkadir[haweanah]
+email: ahauwa48@yahoo.com
