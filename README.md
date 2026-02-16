@@ -36,7 +36,7 @@ Users should be able to:
 
 ---
 
-### 📸 Screenshot
+### 📸 Screenshots
 
 ![Newsletter Mobile Design Screenshot](./src/images/mobiledesign.png)
 
@@ -90,7 +90,7 @@ While building this project, I improved my understanding of:
 
 ---
 
-# 🚀 Render Deployment Settings (For Your React + Vite Project)
+# 🚀 Render Deployment Settings 
 This project is deployed on Render as a static site.
 
 When deploying on Render as a **Static Site**:
