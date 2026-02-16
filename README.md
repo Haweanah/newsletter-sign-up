@@ -69,21 +69,49 @@ While building this project, I improved my understanding of:
 
 - **Lifting state up** in React
 - Conditional rendering using boolean state
-- Controlled form inputs
-- Custom email validation with regex
-- Passing functions as props between components
-- Structuring reusable React components
-- Managing UI state transitions (form → success screen)
+- Conditional Rendering – Displaying UI elements based on       boolean state
+- Controlled Components – Managing input values in React forms
+- Form Validation – Implementing custom email validation with regex
+- Component Communication – Passing functions as props
+- Reusable Components – Structuring maintainable, modular React components
+- UI State Transitions – Switching between form and success message views
+
+---
+
+🔮 Future Improvements
+
+- Add animations for transitions between form and success screen
+
+- Integrate server-side form handling for real email subscriptions
+
+- Enhance accessibility with ARIA attributes
+
+- Add unit tests for form validation logic
 
 ---
 
 # 🚀 Render Deployment Settings (For Your React + Vite Project)
+This project is deployed on Render as a static site.
 
 When deploying on Render as a **Static Site**:
 
 ### Build Command:
-npm install && npm run build
+npm install and npm run build
+
+### Publish Directory:
+dist
+
+### 🛠 Local Production Preview (Optional)
+
+To preview the production build locally:
+npm run build
+npm run preview
 
 
-Author: Hauwa Abdulkadir[haweanah]
-email: ahauwa48@yahoo.com
+
+
+👩‍💻 Author
+
+Hauwa Abdulkadir ([GitHub Profile](https://github.com/Haweanah)
+)
+📧 Email: ahauwa48@yahoo.com
