@@ -46,7 +46,7 @@ Users should be able to:
 
 ### 🔗 Links
 
-- Solution URL: [Frontend Mentor Solution Link]
+- Solution URL: [https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv?tab=submit]
 - Live Site URL: [https://haweanahnewslettersignup.onrender.com/]
 
 ---
